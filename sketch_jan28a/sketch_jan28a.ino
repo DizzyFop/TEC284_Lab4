@@ -20,6 +20,9 @@ u8x8.setCursor(0, 0);
 float temp = dht.readTemperature();
 float humidity = dht.readHumidity();
 
-u8x8.println(temp);
+u8x8.println("Temperature: ");
+u8x8.println((temp * 9/5) + 32);
+u8x8.println("Humidity: ");
 u8x8.print(humidity);
+u8x8.print("%");
 }
